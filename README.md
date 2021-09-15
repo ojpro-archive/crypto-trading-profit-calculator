@@ -1,4 +1,4 @@
-# Cryptocurrencies Trading Profit Calculator
+# Trading Profit Calculator
 
 ## Overview
 Simple and useful trading profit calculator for cryptocurrencies, shares and indexes.
