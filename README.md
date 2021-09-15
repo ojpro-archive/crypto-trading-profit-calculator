@@ -1,4 +1,12 @@
-# Vite Vue Tailwind Starter
+# Cryptocurrencies Trading Profit Calculator
 
 ## Overview
-minimal config vite, vue and tailwindcss project starter, to start fast.
+Simple and useful trading profit calculator for cryptocurrencies, shares and indexes.
+
+### Features
+- Simple & Clean Interface
+- Live Calculate
+- Fees
+- Earn
+- Total Fees
+- Profit Percentage
