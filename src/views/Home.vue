@@ -2,7 +2,7 @@
   <div class="min-h-screen flex flex-col justify-between">
     <div class="sm:w-10/12 md:w-1/2 lg:w-1/3 my-4 mx-auto relative">
       <h1 class="text-center text-xl font-semibold">
-        Crypto Trading Profit Calculator.
+        Trading Profit Calculator.
       </h1>
       <div class="p-4 mt-4 flex flex-col justify-around">
         <div>
