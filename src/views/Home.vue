@@ -5,110 +5,18 @@
         Trading Profit Calculator.
       </h1>
       <div class="p-4 mt-4 flex flex-col justify-around">
+        <label for="amount">Amount</label>
+        <Input v-model="amount" inputName="amount" />
+        <label for="buy">buy</label>
+        <Input v-model="buy" inputName="buy" />
+        <label for="sell">sell</label>
+        <Input v-model="sell" inputName="sell" />
+        <label for="fees">Fees</label>
+        <Input v-model="fees" inputName="fees" />
+        <label for="profit">Profit</label>
+        <Input v-model="profit" inputName="profit" />
         <div>
-          <label for="amount">Amount</label>
-          <input
-            type="number"
-            class="
-              px-2
-              py-1.5
-              rounded
-              border border-gray-700
-              bg-gray-800
-              focus:shadow
-              w-full
-            "
-            v-model.number="amount"
-            id="amount"
-          />
-        </div>
-        <div>
-          <label for="buy">Buy Price</label>
-          <input
-            type="number"
-            class="
-              px-2
-              py-1.5
-              rounded
-              border border-gray-700
-              bg-gray-800
-              focus:shadow
-              w-full
-            "
-            v-model.number="buy"
-            id="buy"
-          />
-        </div>
-        <div>
-          <label for="sell">Sell Price</label>
-          <input
-            type="number"
-            class="
-              px-2
-              py-1.5
-              rounded
-              border border-gray-700
-              bg-gray-800
-              focus:shadow
-              w-full
-            "
-            v-model.number="sell"
-            id="sell"
-          />
-        </div>
-        <div>
-          <label for="fees">Fees(%)</label>
-          <input
-            type="number"
-            class="
-              px-2
-              py-1.5
-              rounded
-              border border-gray-700
-              bg-gray-800
-              focus:shadow
-              w-full
-            "
-            v-model.number="fees"
-            id="fees"
-          />
-        </div>
-        <div>
-          <label for="profit">Profit</label>
-          <input
-            type="number"
-            class="
-              px-2
-              py-1.5
-              rounded
-              border border-gray-700
-              bg-gray-700
-              text-gray-400
-              focus:shadow
-              w-full
-            "
-            disabled
-            v-model.number="profit"
-            id="profit"
-          />
-        </div>
-        <div>
-          <button
-            class="
-              bg-blue-500
-              text-white
-              rounded
-              focus:shadow-sm
-              focus:bg-blue-400
-              px-2
-              py-1.5
-              w-full
-              mt-3
-            "
-            @click="calcProfit()"
-          >
-            Calculate
-          </button>
+          <Button name="Calculate" @click="calcProfit()" />
         </div>
       </div>
       <div class="rounded p-2 m-2 border border-gray-800" v-show="profit">
@@ -120,7 +28,7 @@
           Profit Percentage:
           <span class="text-purple-300">{{ percentage }}%</span>
           <br />
-           Total fees: <span class="text-gray-200">${{ calcFees() }}</span>
+          Total fees: <span class="text-gray-200">${{ calcFees() }}</span>
         </p>
       </div>
     </div>
@@ -129,9 +37,13 @@
 </template>
 <script>
 import Footer from './Footer.vue'
+import Input from '../components/Input.vue'
+import Button from '../components/Button.vue'
 export default {
   components: {
     Footer,
+    Input,
+    Button,
   },
   data() {
     return {
